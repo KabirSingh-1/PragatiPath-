@@ -18,6 +18,9 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, 'user-panel'),
       },
     },
+    optimizeDeps: {
+      include: ['clsx', 'tailwind-merge'],
+    },
     build: {
       outDir: path.resolve(__dirname, 'dist/user'), // Absolute path ensures correct build
       emptyOutDir: true                           // Clear old builds

@@ -18,6 +18,9 @@ export default defineConfig(({ mode }) => {
         '@': path.resolve(__dirname, 'admin-panel'),
       },
     },
+    optimizeDeps: {
+      include: ['clsx', 'tailwind-merge'],
+    },
     build: {
       outDir: path.resolve(__dirname, 'dist/admin'), // Absolute path for safety
       emptyOutDir: true                             // Clear previous build
